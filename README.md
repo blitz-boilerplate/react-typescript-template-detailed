@@ -1,6 +1,55 @@
-# Getting Started with Create React App
+# React TypeScript Template - Detailed
+
+A comprehensive React TypeScript template with extensive starter code and configurations to help you get started quickly. This template includes testing setup, TypeScript configuration, and all the essentials you need to begin building React applications immediately.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Demo Dashboard
+
+This template includes a demo dashboard page that demonstrates how to make API calls to a backend service. The dashboard allows users to enter their name and sends it to a backend API endpoint for testing purposes.
+
+### What It Does
+
+The dashboard (`src/pages/Dashboard.tsx`) displays a simple form that:
+- Prompts the user with "Hi, what's your name?"
+- Allows the user to enter their name in a text input field
+- Sends a POST request to `http://localhost:8080/api/hello` with a JSON body matching the `HelloWorldDto` structure (`{ "name": "..." }`)
+- Displays the response message from the backend server
+
+### Testing the Demo
+
+To test the demo dashboard:
+
+1. **Start the backend server** - Ensure your backend API is running on `http://localhost:8080` with an endpoint at `/api/hello` that accepts POST requests with a `HelloWorldDto` body.
+
+2. **Start the React app**:
+   ```bash
+   npm start
+   ```
+
+3. **Open the browser** - Navigate to [http://localhost:3000](http://localhost:3000)
+
+4. **Test the form** - Enter your name and click "Send" to see the API response.
+
+### Removing the Demo Code
+
+When you're ready to start building your actual application, you can remove the demo dashboard code:
+
+1. **Delete the demo files**:
+   - `src/pages/Dashboard.tsx`
+   - `src/pages/Dashboard.css`
+   - `src/services/api.ts` (if you don't need the API service structure)
+   - `src/types/dto.ts` (if you don't need the DTO structure)
+
+2. **Update `src/App.tsx`** - Replace the Dashboard import and usage with your own application components.
+
+3. **Optional**: Keep the folder structure (`src/pages/`, `src/services/`, `src/types/`) as a reference for organizing your own code, or remove them if you prefer a different structure.
+
+The demo code serves as a reference implementation showing:
+- How to structure TypeScript interfaces/DTOs
+- How to create API service functions
+- How to build React components with form handling and API integration
+- How to handle loading states and errors
 
 ## Available Scripts
 
